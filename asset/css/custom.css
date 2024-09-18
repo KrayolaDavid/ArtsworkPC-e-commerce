@@ -1,0 +1,35 @@
+*{
+    font-family:'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+.underline{
+    height: 5px;
+    width: 100px;
+    background-color: red;
+    border-radius: 20px;
+
+}
+.underlines{
+    height: 5px;
+    width: 210px;
+    background-color: red;
+    border-radius: 20px;
+
+}
+.underliner{
+    height: 5px;
+    width: 140px;
+    background-color: red;
+    border-radius: 20px;
+
+}
+.underlined{
+    height: 5px;
+    width: 150px;
+    background-color: red;
+    border-radius: 20px;
+
+}

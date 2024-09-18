@@ -1,0 +1,64 @@
+.search-container {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container */
+}
+
+.search-input {
+  flex: 1; /* Allow the input to grow */
+  padding: 10px; /* Adjust padding as needed */
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+  height: 40px; /* Adjust height as needed */
+}
+
+.search-button {
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  padding: 0 10px; /* Adjust padding as needed */
+  border: 1px solid #ccc;
+  border-radius: 0 4px 4px 0;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  height: 40px; /* Match height with input */
+  box-sizing: border-box;
+}
+
+
+/* General navbar link styling */
+.navbar-nav .nav-item .nav-link {
+  color: white; /* Adjust text color as needed */
+  text-decoration: none;
+  padding: 15px 20px; /* Adjust padding for more space */
+  font-size: 18px; /* Adjust font size */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for navbar links */
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: #575757; /* Adjust hover background color */
+  border-radius: 4px;
+  color: #fff; /* Adjust hover text color if needed */
+}
+
+/* Dropdown menu styling */
+.navbar-nav .dropdown-menu {
+  background-color: #333; /* Adjust dropdown background color */
+}
+
+/* Dropdown item styling */
+.navbar-nav .dropdown-menu .dropdown-item {
+  color: white; /* Adjust dropdown item text color */
+}
+
+/* Hover effect for dropdown items */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+  background-color: #575757; /* Adjust dropdown item hover background color */
+  color: #fff; /* Adjust dropdown item hover text color */
+}

@@ -1,0 +1,494 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+ol, ul {
+  margin-bottom: 0;
+}
+
+.buildapc {
+  display: flex;
+  flex-wrap: flex;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+}
+
+.chart {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  background-color: #323232;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #161616;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(9, 9, 9, 0.727);
+}
+
+.selected{
+  width: 50%;
+  height: 100%;
+  background-color: #000000;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.86);
+  border-radius: 5px;
+}
+
+.selected-parts{
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  overflow-y: auto;
+  height: 610px;
+  background-color: #000000;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.86);
+  border-radius: 5px;
+}
+
+.parts-selected-img {
+  width: 130px;
+  height: 125px;
+  border-radius: 5px;
+}
+
+.selected-items {
+  display: flex;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 655px;
+  height: 130px;
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: medium;
+  border-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0, 0.86);
+  border-radius: 5px;
+}
+
+.selected-items h4{
+  font-size: 24px;
+}
+
+.selected h1{
+  color: #fff;
+}
+
+.parts-select h1{
+  color: #fff;
+}
+
+.parts-select h4{
+  margin-top: 20px;
+}
+
+.parts-select-img {
+  margin-top: 12%;
+  width: 120px;
+  border-radius: 5px;
+}
+
+.parts-select {
+  margin-top: 25px;
+  background-color: #141414;
+  height: 375px;
+  width: 100%;
+  border-style: solid;
+  border-width: medium;
+  border-color:  #1a1a1a;;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(9, 9, 9, 0.727);
+}
+
+.selection {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 17%;
+  overflow-x: auto;
+  height: 80%;
+  margin-top: 10px;
+}
+
+.item-content {
+  width: 410px;
+  margin-left: 10px;
+}
+
+.part-items {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+  width: 225px;
+  height: 265px;
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: medium;
+  border-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0, 0.86);
+  border-radius: 5px;
+}
+
+.part-items:hover {
+  transform: scale(1.3);
+  z-index: 2;
+}
+
+.btn-div {
+  text-align: right;
+  width: 110px;
+}
+
+.part-items h4{
+  font-weight: 400;
+}
+
+.compare-contents{
+  margin-top: 20px;
+  width: 100%;
+  height: 400px;
+  background-color: #1d1d1d;
+  box-shadow: 0 5px 15px rgba(0,0,0, 0.86);
+  border-radius: 5px;
+}
+
+.caption p{
+  margin-left: 15px;
+  color: white;
+  font-size: 16px;
+  text-align: left;
+}
+
+.caption h3{
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 9px 21px;
+  font-size: 12px;
+  background: #2a2a2a;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.btn:hover {
+  border: 1px solid #000000;
+  background: #9d9d9d;
+  color: #ff0000;
+  transition: 1s;
+}
+
+.btn-compare {
+  width: 106px;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #232323;
+  padding: 9px 21px;
+  font-size: 12px;
+  background: #171717;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.btn-compare:hover {
+  border: 1px solid #000000;
+  background: #303030;
+  color: #ffffff;
+  transition: 1s;
+}
+
+.btn-clear {
+  width: 106px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  border: 1px solid #6c0000;
+  padding: 9px 21px;
+  font-size: 12px;
+  background: red;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.btn-clear:hover {
+  border: 1px solid #c7372c;
+  background: #a53a32;
+  color: white;
+  transition: 1s;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(114, 114, 114); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #585858; 
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav input[type="text"] {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.easybuild {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.actions button {
+    background-color: #1a9c4e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.component-selection {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.component {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.component img {
+    max-width: 50px;
+    height: auto;
+}
+
+.component button {
+    background-color: #1a9c4e;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.selected-components {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.component-info {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.component-info img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.details h3 {
+    margin-top: 0;
+}
+
+.details button {
+    background-color: #1a9c4e;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.details .select {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.details .get-it {
+    background-color: #ffc107;
+    color: #333;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .contacts h3,
+  .social-media h3 {
+    margin-bottom: 10px;
+  }
+  
+  .contacts p {
+    margin: 5px 0;
+  }
+  
+  .contacts p i {
+    margin-right: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ccc;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+  }
+
+  main {
+    padding: 40px;
+    background-color: white;
+  }
+  
+  main h1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  main .grid {
+    display: grid;
+    gap: 20px;
+  }
+  
+  main .card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  main .card img {
+    height: 200px;
+  }
+  
+  main .card h2 {
+    margin-top: 20px;
+  }
+  
+  main .card p {
+    margin-top: 10px;
+  }
+  
+  main .card button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  main .card button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Dropdown Selection for Part Picker */
+.dropdown-cpu {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content-cpu {
+  display: none;
+  position: relative;
+  background-color: #202020;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-cpu:hover .dropdown-content-cpu {
+  display: block;
+}
+
+.dropdown-cpu:hover .dropbtn-cpu {
+  background-color: #9b0000;
+  color: #000000;
+}
